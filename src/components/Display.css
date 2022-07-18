@@ -1,0 +1,11 @@
+.display {
+	background: var(--screen-background-color);
+	border-radius: var(--border-radius);
+	height: 85px;
+	width: 100%;
+}
+
+.display-numbers {
+	color: var(--white);
+	font-size: var(--font-size);
+}

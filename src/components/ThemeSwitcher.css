@@ -1,0 +1,29 @@
+* {
+	--theme-switch-font-size: 12px;
+}
+
+.ball {
+	background: var(--submit-key-background);
+	border-radius: 100%;
+	margin-left: 4px;
+	height: 12px;
+	width: 12px;
+}
+
+.slider {
+	background: var(--toggle-background-color);
+	border-radius: 20%/50%;
+	width: 100%;
+	height: 20px;
+}
+
+.theme-text {
+	color: var(--white);
+	font-size: var(--theme-switch-font-size);
+	text-transform: uppercase;
+}
+
+.theme-number {
+	color: var(--white);
+	font-size: var(--theme-switch-font-size);
+}

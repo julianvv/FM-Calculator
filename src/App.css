@@ -22,32 +22,34 @@
   /* Text */
   --text-color: hsl(221, 14%, 31%);
   --white: hsl(0, 0%, 100%);
-	--font-size: 32px;
-	--font-family: "League Spartan", sans-serif;
+  --font-size: 32px;
+  --font-family: "League Spartan", sans-serif;
 
+	/* Border radius */
+	--border-radius: 10px;
 
   /* Theme transitioning */
   --dark-mode-transition: background-color 1.5s, color 1.5s;
 }
 
 [data-theme="2"] {
-	/* Backgrounds */
-	--main-background-color:hsl(0, 0%, 90%);
-	--toggle-background-color: hsl(0, 5%, 81%);
-	--keypad-background-color: hsl(0, 5%, 81%);
-	--screen-background-color: hsl(0, 0%, 93%);
+  /* Backgrounds */
+  --main-background-color: hsl(0, 0%, 90%);
+  --toggle-background-color: hsl(0, 5%, 81%);
+  --keypad-background-color: hsl(0, 5%, 81%);
+  --screen-background-color: hsl(0, 0%, 93%);
 
-	/* Keys */
-	--special-key-background: hsl(185, 42%, 37%);
-	--special-key-shadow: hsl(185, 58%, 25%);
+  /* Keys */
+  --special-key-background: hsl(185, 42%, 37%);
+  --special-key-shadow: hsl(185, 58%, 25%);
 
-	--submit-key-background: hsl(25, 98%, 40%);
-	--submit-key-shadow: hsl(25, 99%, 27%);
+  --submit-key-background: hsl(25, 98%, 40%);
+  --submit-key-shadow: hsl(25, 99%, 27%);
 
-	--key-background: hsl(45, 7%, 89%);
-	--key-shadow: hsl(35, 11%, 61%);
-	/* Text */
-	--text-color: hsl(60, 10%, 19%);
+  --key-background: hsl(45, 7%, 89%);
+  --key-shadow: hsl(35, 11%, 61%);
+  /* Text */
+  --text-color: hsl(60, 10%, 19%);
 }
 
 [data-theme="3"] {
@@ -68,20 +70,32 @@
   --key-shadow: hsl(290, 70%, 36%);
   /* Text */
   --text-color: hsl(52, 100%, 62%);
-	--secondary-text-color: hsl(198, 20%, 13%);
+  --secondary-text-color: hsl(198, 20%, 13%);
 }
 
 /* General styling */
 
+
 body {
-	background: var(--main-background-color);
-	font-size: var(--font-size);
-	font-family: var(--font-family);
-	color: var(--text-color);
+  background: var(--main-background-color);
+  font-size: var(--font-size);
+  font-family: var(--font-family);
+  color: var(--text-color);
 }
 
-h1 {
-	font-size: inherit;
-	font-family: inherit;
-	color: hsl(0, 0%, 100%);
+.title {
+  font-size: var(--font-size);
+  color: hsl(0, 0%, 100%);
+}
+
+@media all and (max-width: 375px) {
+  .calculator {
+		margin: 20px;
+  }
+}
+
+@media all and (max-width: 1440px) and (min-width: 376px) {
+  .calculator {
+		margin: 40px;
+  }
 }

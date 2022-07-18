@@ -1,0 +1,6 @@
+.keyboard {
+	background: var(--keypad-background-color);
+	border-radius: var(--border-radius);
+	height: 100%;
+	width: 100%;
+}
