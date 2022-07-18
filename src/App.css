@@ -21,7 +21,7 @@
   --key-shadow: hsl(28, 16%, 65%);
   /* Text */
   --text-color: hsl(221, 14%, 31%);
-  --white: hsl(0, 0, 100%);
+  --white: hsl(0, 0%, 100%);
 	--font-size: 32px;
 	--font-family: "League Spartan", sans-serif;
 
@@ -48,7 +48,6 @@
 	--key-shadow: hsl(35, 11%, 61%);
 	/* Text */
 	--text-color: hsl(60, 10%, 19%);
-	--white: hsl(0, 0, 100%);
 }
 
 [data-theme="3"] {
@@ -70,7 +69,6 @@
   /* Text */
   --text-color: hsl(52, 100%, 62%);
 	--secondary-text-color: hsl(198, 20%, 13%);
-  --white: hsl(0, 0, 100%);
 }
 
 /* General styling */
@@ -80,4 +78,10 @@ body {
 	font-size: var(--font-size);
 	font-family: var(--font-family);
 	color: var(--text-color);
+}
+
+h1 {
+	font-size: inherit;
+	font-family: inherit;
+	color: hsl(0, 0%, 100%);
 }
