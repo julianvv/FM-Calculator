@@ -9,3 +9,11 @@
 	color: var(--white);
 	font-size: var(--font-size);
 }
+
+[data-theme="2"] .display-numbers {
+	color: var(--text-color);
+}
+
+[data-theme="3"] .display-numbers {
+	color: var(--text-color);
+}

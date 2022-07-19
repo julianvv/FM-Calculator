@@ -3,11 +3,22 @@
 }
 
 .ball {
-	background: var(--submit-key-background);
+	background: hsl(6, 63%, 50%);
 	border-radius: 100%;
 	margin-left: 4px;
 	height: 12px;
 	width: 12px;
+	transition: transform 1.0s, color 1.5s;
+}
+
+[data-theme="2"] .ball {
+	background: hsl(25, 98%, 40%);
+	transform: translateX(18px);
+}
+
+[data-theme="3"] .ball {
+	background: hsl(176, 100%, 44%);
+	transform: translateX(36px);
 }
 
 .slider {
@@ -23,7 +34,23 @@
 	text-transform: uppercase;
 }
 
+[data-theme="2"] .theme-text {
+	color: var(--text-color);
+}
+
+[data-theme="3"] .theme-text {
+	color: var(--text-color);
+}
+
 .theme-number {
 	color: var(--white);
 	font-size: var(--theme-switch-font-size);
+}
+
+[data-theme="2"] .theme-number {
+	color: var(--text-color);
+}
+
+[data-theme="3"] .theme-number {
+	color: var(--text-color);
 }

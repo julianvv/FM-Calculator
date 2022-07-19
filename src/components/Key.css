@@ -1,0 +1,114 @@
+/* General key styling */
+.key {
+  align-items: center;
+  border-radius: var(--border-radius);
+  display: flex;
+  height: 60px;
+  justify-content: center;
+  text-align: center;
+
+  --key-background: hsl(
+    var(--key-background-h),
+    var(--key-background-s),
+    var(--key-background-l)
+  );
+}
+
+/* Key active states */
+.key:active {
+  --key-background-l: 100%;
+}
+
+[data-theme="3"] .key:active {
+  --key-background-l: 40%;
+}
+
+/* Styling for key content */
+.key-content {
+  display: flex;
+  align-items: flex-end;
+  padding: 10px 10px 0px 10px;
+}
+
+/* Regular keys (1-9, dot and mathmetical operators) */
+.regular-key {
+  background: var(--key-background);
+  box-shadow: 0px 4px 0px var(--key-shadow);
+  color: var(--text-color);
+}
+
+/* Special keys (DEL and RESET) */
+.special-key {
+	--key-background-h: 225;
+	--key-background-s: 21%;
+	--key-background-l: 49%;
+
+  background-color: var(--key-background);
+  box-shadow: 0px 4px 0px var(--special-key-shadow);
+  color: var(--white);
+  font-size: calc(var(--font-size) / 2);
+}
+
+[data-theme="2"] .special-key {
+  --key-background-h: 185;
+  --key-background-s: 42%;
+  --key-background-l: 37%;
+}
+
+[data-theme="3"] .special-key {
+  --key-background-h: 281;
+  --key-background-s: 89%;
+  --key-background-l: 26%;
+}
+
+/* Special key active states */
+.special-key:active {
+	--key-background-l: 60%;
+}
+
+[data-theme="2"] .special-key:active {
+	--key-background-l: 60%;
+}
+
+/* Equals key */
+.equals-key {
+	--key-background-h: 6;
+  --key-background-s: 63%;
+  --key-background-l: 50%;
+  background-color: var(--key-background);
+  box-shadow: 0px 4px 0px var(--equals-key-shadow);
+  color: var(--white);
+  font-size: calc(var(--font-size) / 2);
+}
+
+[data-theme="2"] .equals-key {
+  --key-background-h: 25;
+  --key-background-s: 98%;
+  --key-background-l: 40%;
+  color: var(--white);
+}
+
+[data-theme="3"] .equals-key {
+	--key-background-h: 176;
+  --key-background-s: 100%;
+  --key-background-l: 44%;
+  color: var(--secondary-text-color);
+}
+
+/* Equal key active states */
+.equals-key:active {
+	--key-background-l: 60%;
+}
+
+[data-theme="2"] .equals-key:active {
+	--key-background-l: 60%;
+}
+
+[data-theme="3"] .equals-key:active {
+	--key-background-l: 75%;
+}
+
+/* Helper class to make RESET and EQUALS span 2 cols */
+.wide-key {
+  grid-column: 2 span;
+}
