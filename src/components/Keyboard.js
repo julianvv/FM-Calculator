@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { memo } from 'react'
 import "./Keyboard.css";
 
 import Key from "./Key.js";
 
-export default function Keyboard() {
+function Keyboard() {
 	return (
 		<div className='keyboard grid gap-4 grid-cols-4 grid-rows-5'>
 			<Key text={7} type={"regular"} />
@@ -27,3 +27,5 @@ export default function Keyboard() {
 		</div>
 	)
 }
+
+export default memo(Keyboard);

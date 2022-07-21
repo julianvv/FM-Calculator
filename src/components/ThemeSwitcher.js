@@ -1,21 +1,27 @@
-import React, { useState } from "react";
+import React, { memo, useEffect, useState } from "react";
 import "./ThemeSwitcher.css";
 
-export default function ThemeSwitcher({ theme }) {
+function ThemeSwitcher({ theme }) {
   const [currentTheme, setCurrentTheme] = useState(theme);
+
+	useEffect(() => {
+		//Change calculator-theme attribute to use different CSS
+		document.documentElement.setAttribute("data-theme", currentTheme);
+
+    //Save current theme in browser storage
+    localStorage.setItem("calculator-theme", currentTheme);
+	}, [currentTheme]);
+	
 
   const updateTheme = () => {
     //Update local state to keep track of currentTheme
+		//The state change will trigger a re-render
+		//Because useEffect has currentTheme as dependency it will add the "calculator-theme" attribute
     if (currentTheme < 3) {
       setCurrentTheme(currentTheme + 1);
     } else {
       setCurrentTheme(1);
     }
-
-    document.documentElement.setAttribute("data-theme", currentTheme);
-
-    //Save current theme in browser storage
-    localStorage.setItem("theme", currentTheme);
   };
 
   return (
@@ -37,3 +43,5 @@ export default function ThemeSwitcher({ theme }) {
     </div>
   );
 }
+
+export default memo(ThemeSwitcher);

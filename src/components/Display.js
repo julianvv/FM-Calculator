@@ -1,8 +1,14 @@
-import React from "react";
+import React, { memo } from "react";
 import "./Display.css";
 
-export default function Display() {
-  return <div className="display flex justify-end items-center pr-5">
-		<p className="display-numbers">123213,23232.23</p>
-	</div>;
+
+
+function Display({displayText}) {
+  return (
+    <div className="display flex justify-end items-center pr-5">
+      <p className="display-numbers">{displayText}</p>
+    </div>
+  );
 }
+
+export default memo(Display);

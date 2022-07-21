@@ -2,25 +2,17 @@ import "./App.css";
 import ThemeSwitcher from "./components/ThemeSwitcher.js";
 import Display from "./components/Display.js";
 import Keyboard from "./components/Keyboard.js";
-import { useEffect } from "react";
 
 function App() {
-  //Add transition after first render
-  useEffect(() => {
-    document.body.style.transition = getComputedStyle(
-      document.documentElement
-    ).getPropertyValue("--dark-mode-transition");
-  }, []);
-
   //Get theme number
-  const storedTheme = localStorage.getItem("theme");
+  let storedTheme = localStorage.getItem("calculator-theme");
 
   //Don't do the transition if a theme was saved
   if (storedTheme !== null) {
     document.documentElement.setAttribute("data-theme", storedTheme);
   } else {
     document.documentElement.setAttribute("data-theme", 1);
-    localStorage.setItem("theme", 1);
+    localStorage.setItem("calculator-theme", 1);
     storedTheme = 1;
   }
 
@@ -32,7 +24,7 @@ function App() {
           <ThemeSwitcher theme={Number(storedTheme)} />
         </div>
         <div className="flex mt-8">
-          <Display />
+          <Display displayText={123} />
         </div>
         <div className="flex mt-5">
           <Keyboard />
